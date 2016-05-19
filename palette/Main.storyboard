@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS" customClass="XFDrawView">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="wb0-Cx-hNF">
+                                <rect key="frame" x="16" y="28" width="288" height="29"/>
+                                <segments>
+                                    <segment title="红"/>
+                                    <segment title="橙"/>
+                                    <segment title="黄"/>
+                                    <segment title="绿"/>
+                                    <segment title="青"/>
+                                    <segment title="蓝"/>
+                                    <segment title="紫"/>
+                                </segments>
+                                <connections>
+                                    <action selector="changeColor:" destination="vXZ-lx-hvc" eventType="valueChanged" id="YXd-dP-Puv"/>
+                                </connections>
+                            </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="0ne-uc-fVt">
+                                <rect key="frame" x="16" y="520" width="288" height="29"/>
+                                <segments>
+                                    <segment title="画线"/>
+                                    <segment title="矩形"/>
+                                    <segment title="椭圆"/>
+                                    <segment title="圆角矩形"/>
+                                    <segment title="铅笔"/>
+                                </segments>
+                                <connections>
+                                    <action selector="chageShape:" destination="vXZ-lx-hvc" eventType="valueChanged" id="cZI-Ax-wP2"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="wb0-Cx-hNF" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="6jf-vA-pbE"/>
+                            <constraint firstItem="0ne-uc-fVt" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="EaT-vr-pBT"/>
+                            <constraint firstItem="0ne-uc-fVt" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="JQp-ne-yhR"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="0ne-uc-fVt" secondAttribute="bottom" constant="20" id="hZc-6q-6GA"/>
+                            <constraint firstItem="wb0-Cx-hNF" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" id="n7U-SN-mlk"/>
+                            <constraint firstItem="wb0-Cx-hNF" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="uvU-bP-gBs"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="266" y="363"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
